@@ -17,8 +17,3 @@ config :img_to_txt, ImgToTxt.Repo,
   database: "img_to_txt_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
-
-
-# Testing mocks
-config :img_to_txt, :cognitive_api, ImgToTxt.Azure.CognitiveClientMock
-

@@ -27,6 +27,8 @@ config :logger, :console,
 config :img_to_txt, :cognitive_api_key, System.get_env("AZURE_API_KEY")
 config :img_to_txt, :cognitive_api_url, System.get_env("AZURE_API_URL") || "https://eastus.api.cognitive.microsoft.com/contentmoderator/moderate/v1.0/ProcessImage/OCR?language=eng&CacheImage=true&enhanced=false"
 
+config :img_to_txt, :cognitive_api, ImgToTxt.Azure.CognitiveClient
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"

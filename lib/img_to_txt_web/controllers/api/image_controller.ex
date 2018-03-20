@@ -7,5 +7,5 @@ defmodule ImgToTxtWeb.API.ImageController do
     response = @cognitive_api.get_text_from_image(imagePath, content_type)
     render conn, "index.json", response
   end
-
+  
 end

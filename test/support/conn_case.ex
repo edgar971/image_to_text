@@ -27,11 +27,7 @@ defmodule ImgToTxtWeb.ConnCase do
   end
 
 
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(ImgToTxt.Repo)
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(ImgToTxt.Repo, {:shared, self()})
-    end
+  setup do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 

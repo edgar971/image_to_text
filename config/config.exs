@@ -6,8 +6,7 @@
 use Mix.Config
 
 # General application configuration
-config :img_to_txt,
-  ecto_repos: [ImgToTxt.Repo]
+
 
 # Configures the endpoint
 config :img_to_txt, ImgToTxtWeb.Endpoint,

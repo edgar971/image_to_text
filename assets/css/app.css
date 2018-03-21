@@ -1,3 +1,28 @@
 .alert-info {
   white-space: pre-wrap;
 }
+
+/**
+* Image Holder
+**/
+.image-holder {
+  border: 10px dashed #ccc; 
+  width: 100%; 
+  min-height: 300px; 
+  margin: 20px auto;
+}
+
+.image-holder.hover {
+  transition: ease-in-out;
+  border-color:rgb(135, 213, 144); 
+}
+
+.image-holder form {
+  display: none;
+}
+
+.image-holder img { 
+  display: block;
+  max-width: 100%;
+  padding: 15px;
+}

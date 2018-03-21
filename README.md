@@ -9,6 +9,6 @@ To start your Phoenix server:
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Todo
-[ ] Enhance UI
-[ ] Better error handling
-[ ] Use AJAX
+- [ ] Enhance UI
+- [ ] Better error handling
+- [ ] Use AJAX

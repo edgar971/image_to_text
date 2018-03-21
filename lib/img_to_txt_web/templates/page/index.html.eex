@@ -1,11 +1,11 @@
 <div class="jumbotron">
-  <h2>Convert an Image to Text</h2>
-  <p class="lead">Select the image below</p>
-
-  <%= form_for @conn, page_path(@conn, :create),  [multipart: true], fn f -> %>
-    <%= file_input f, :image, required: true %>
-    <%= submit "Submit" %>
-  <% end %>
+  <h2>Drop an image below</h2>
+  <div class="image-holder">
+    <%= form_for @conn, page_path(@conn, :create),  [multipart: true], fn f -> %>
+      <%= file_input f, :image, required: true %>
+      <%= submit "Submit" %>
+    <% end %>
+  </div>
 
  
 </div>

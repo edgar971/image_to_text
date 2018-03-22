@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 const ACCEPTED_FILE_TYPES = ['image/png', 'image/jpeg', 'image/gif']
 const IMAGE_PREVIEW_CLASS = 'preview'
 
@@ -56,4 +58,16 @@ export function previewFiles(files, element) {
 export function clearPreviewFiles(element) {
   const previewImages = element.querySelectorAll(`.${IMAGE_PREVIEW_CLASS}`)
   Object.values(previewImages).map((image) => element.removeChild(image))
+}
+
+function createFormData(files) {
+  const form = new FormData()
+  files.map((file) => form.append("image", file))
+  return form
+}
+
+export async function uploadAndConvertFilesToText(files) {
+  const formData = createFormData(files)
+  const { data } = await axios.post('/api/image', formData)
+  return data
 }

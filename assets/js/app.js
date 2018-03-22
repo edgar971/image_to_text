@@ -19,6 +19,19 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+import state from './state'
 import picker from './image-picker'
 
-picker('.image-holder')
+const render = () => {
+  const textElement = document.querySelector('textarea.text')
+
+  picker('.image-holder')
+
+  state.subscribe(() => {
+    const { text } = state.getState()
+    textElement.innerHTML = text
+  })
+}
+
+render()
+

@@ -2,14 +2,34 @@
   white-space: pre-wrap;
 }
 
+.holder {
+  margin: auto;
+}
+
+.holder h2 {
+  margin-bottom: 45px;
+}
 /**
 * Image Holder
 **/
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper textarea {
+  padding: 10px;
+  font-size: 16px;
+}
+
 .image-holder {
   border: 10px dashed #ccc; 
-  width: 100%; 
   min-height: 300px; 
-  margin: 20px auto;
+  width: 47%;
+}
+
+.wrapper .text {
+  width: 47%;
 }
 
 .image-holder.hover {

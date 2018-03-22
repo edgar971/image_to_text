@@ -1,11 +1,14 @@
-<div class="jumbotron">
+<section class="jumbotron holder">
   <h2>Drop an image below</h2>
-  <div class="image-holder">
-    <%= form_for @conn, page_path(@conn, :create),  [multipart: true], fn f -> %>
-      <%= file_input f, :image, required: true %>
-      <%= submit "Submit" %>
-    <% end %>
+  
+  <div class="wrapper">
+    <div class="image-holder">
+      <%= form_for @conn, page_path(@conn, :create),  [multipart: true], fn f -> %>
+        <%= file_input f, :image, required: true %>
+        <%= submit "Submit" %>
+      <% end %>
+    </div>
+    <textarea class="text"></textarea>
   </div>
-
  
-</div>
+</section>

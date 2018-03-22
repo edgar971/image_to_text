@@ -51,7 +51,8 @@ exports.config = {
         targets: {
           browsers: ['last 2 Chrome versions']
         }
-      }]]
+      }]],
+      plugins: ["transform-es2015-destructuring", "transform-object-rest-spread"]
     }
   },
 

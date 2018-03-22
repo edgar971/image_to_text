@@ -37,12 +37,28 @@
   border-color:rgb(135, 213, 144); 
 }
 
+
+.image-holder {
+  position: relative;
+}
+
 .image-holder form {
   display: none;
 }
 
-.image-holder img { 
+.image-holder img.preview { 
   display: block;
   max-width: 100%;
   padding: 15px;
+}
+
+.image-holder .placeholder {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+}
+
+.image-holder.hover .placeholder {
+  display: none;
 }

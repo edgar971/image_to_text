@@ -3,7 +3,7 @@ defmodule ImgToTxtWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Convert an Image to Text"
+    assert html_response(conn, 200) =~ "Convert Image to Text"
   end
 
   test "POST /", %{conn: conn} do

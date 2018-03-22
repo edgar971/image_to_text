@@ -1,4 +1,4 @@
-import { bindEvents } from "./events";
+import { bindEvents } from "./events"
 
 const support = () => ({
   filereader: typeof FileReader != 'undefined',

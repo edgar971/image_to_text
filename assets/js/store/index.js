@@ -41,6 +41,12 @@ class Store {
       text
     })
   }
+
+  setProcessing(processing) {
+    this.mergeWithState({
+      processing
+    })
+  }
 }
 
 export default Store

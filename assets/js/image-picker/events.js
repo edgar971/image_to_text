@@ -16,6 +16,8 @@ export function onDragEnd() {
 
 export async function onDrop(event) {
   event.preventDefault()
+  state.setProcessing(true)
+  
   const { files } = event.dataTransfer
   const { target } = event
 
@@ -30,6 +32,8 @@ export async function onDrop(event) {
   } catch (e) {
     
   }
+
+  state.setProcessing(false)
 }
 
 export function bindEvents(element) {

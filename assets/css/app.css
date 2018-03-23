@@ -62,3 +62,7 @@
 .image-holder.hover .placeholder {
   display: none;
 }
+
+body.processing {
+  cursor: progress;
+}

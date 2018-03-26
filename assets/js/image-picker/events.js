@@ -1,4 +1,4 @@
-import { processFiles, processFilesForPreview, previewFiles, uploadAndConvertFilesToText } from "./file";
+import { processFiles, processFilesForPreview, previewFiles, uploadAndConvertFilesToText } from "./file"
 import state from '../state'
 
 export function onDragOver() {

@@ -22,25 +22,28 @@ import "phoenix_html"
 import state from './state'
 import picker from './image-picker'
 
+const textElementSub = () => {
+  const { text } = state.getState()
+  textElement.innerHTML = text
+}
+
+const processingSub = () => {
+  const { processing } = state.getState()
+  if (processing) {
+    body.classList.add('processing')
+  } else {
+    body.classList.remove('processing')
+  }
+}
+
 const render = () => {
   const textElement = document.querySelector('textarea.text')
   const body = document.querySelector('body')
 
   picker('.image-holder')
 
-  state.subscribe(() => {
-    const { text } = state.getState()
-    textElement.innerHTML = text
-  })
-
-  state.subscribe(() => {
-    const { processing } = state.getState() 
-    if(processing) {
-      body.classList.add('processing')
-    } else {
-      body.classList.remove('processing')
-    }
-  })
+  state.subscribe(textElementSub)
+  state.subscribe(processingSub)
 }
 
 render()

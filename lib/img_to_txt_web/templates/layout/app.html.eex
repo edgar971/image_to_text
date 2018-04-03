@@ -24,8 +24,8 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Stellar</h1>
+						<span class="logo"><img src="images/logo.svg" alt="texto logo" /></span>
+						<h1>Texto</h1>
 						<p>A simple web app to extract text found in the image.</p>
 					</header>
 				<!-- Main -->

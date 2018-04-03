@@ -24,5 +24,4 @@ defmodule ImgToTxtWeb.ChannelCase do
       @endpoint ImgToTxtWeb.Endpoint
     end
   end
-  
 end

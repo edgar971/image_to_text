@@ -28,8 +28,9 @@ defmodule ImgToTxtWeb do
 
   def view do
     quote do
-      use Phoenix.View, root: "lib/img_to_txt_web/templates",
-                        namespace: ImgToTxtWeb
+      use Phoenix.View,
+        root: "lib/img_to_txt_web/templates",
+        namespace: ImgToTxtWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 2, view_module: 1]

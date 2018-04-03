@@ -8,9 +8,11 @@ defmodule ImgToTxtWeb.API.ImageViewTest do
     viewInput = %{
       Text: "Awesome image text"
     }
+
     expectedViewReponse = %{
       text: "Awesome image text"
     }
+
     assert render(ImgToTxtWeb.API.ImageView, "index.json", viewInput) == expectedViewReponse
   end
 end

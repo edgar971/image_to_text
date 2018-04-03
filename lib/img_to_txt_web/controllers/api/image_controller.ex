@@ -5,7 +5,6 @@ defmodule ImgToTxtWeb.API.ImageController do
 
   def create(conn, %{"image" => %{path: imagePath, content_type: content_type}}) do
     response = @cognitive_api.get_text_from_image(imagePath, content_type)
-    render conn, "index.json", response
+    render(conn, "index.json", response)
   end
-  
 end

@@ -8,4 +8,3 @@ config :img_to_txt, ImgToTxtWeb.Endpoint,
 
 # Print only warnings and errors during test
 config :logger, level: :warn
-

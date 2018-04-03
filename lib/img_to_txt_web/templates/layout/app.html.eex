@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A simple web app to extract text found in the image.">
     <meta name="author" content="Edgar Pino">
-    <title>Texto - A simple web app to extract text found in the image.</title>
+    <title>Texto - A simple web app to extract text found in images.</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
@@ -25,7 +25,7 @@
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="texto logo" /></span>
 						<h1>Texto</h1>
-						<p>A simple web app to extract text found in the image.</p>
+						<p>A simple web app to extract text found in images.</p>
 					</header>
 				<!-- Main -->
 					<div id="main">

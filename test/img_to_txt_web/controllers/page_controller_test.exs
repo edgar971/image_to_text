@@ -3,6 +3,6 @@ defmodule ImgToTxtWeb.PageControllerTest do
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")
-    assert html_response(conn, 200) =~ "Texto - A simple web app to extract text found in the image."
+    assert html_response(conn, 200) =~ "Texto - A simple web app to extract text found in images."
   end
 end

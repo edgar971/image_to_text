@@ -24,10 +24,12 @@ import picker from './image-picker'
 
 const textElementSub = () => {
   const { text } = state.getState()
+  const textElement = document.querySelector('textarea.text')
   textElement.innerHTML = text
 }
 
 const processingSub = () => {
+  const body = document.querySelector('body')
   const { processing } = state.getState()
   if (processing) {
     body.classList.add('processing')
@@ -37,11 +39,7 @@ const processingSub = () => {
 }
 
 const render = () => {
-  const textElement = document.querySelector('textarea.text')
-  const body = document.querySelector('body')
-
   picker('.image-holder')
-
   state.subscribe(textElementSub)
   state.subscribe(processingSub)
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A simple tool that converts the text inside of an image to plain text.">
+    <meta name="description" content="A simple web app to extract text found in the image.">
     <meta name="author" content="Edgar Pino">
 
     <title>Convert Image to Text</title>
@@ -18,17 +18,32 @@
   </head>
 
   <body>
-    <div class="container">
-      <main role="main">
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+  	
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-      <footer class="text-center">
-        <p><small>Created by Edgar Pino @ 2018</small></p>
-      </footer>
-    </div> <!-- /container -->
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Stellar</h1>
+						<p>A simple web app to extract text found in the image.</p>
+					</header>
+				<!-- Main -->
+					<div id="main">
+				
+
+						<!-- First Section -->
+            <%= render @view_module, @view_template, assigns %>
+							
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">Created By Edgar Pino</p>
+					</footer>
+
+			</div>
+
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

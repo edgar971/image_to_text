@@ -41,7 +41,8 @@ defmodule ImgToTxt.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
-      {:httpoison, "~> 1.0"}
+      {:httpoison, "~> 1.0"},
+      {:mogrify, "~> 0.5.6"}
     ]
   end
 

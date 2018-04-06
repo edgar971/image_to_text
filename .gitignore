@@ -10,6 +10,9 @@ erl_crash.dump
 # Generated on crash by NPM
 npm-debug.log
 
+# Ignore generated test images
+/test/assets/test-resized.png
+
 # Static artifacts
 /assets/node_modules
 
@@ -25,3 +28,4 @@ npm-debug.log
 # secrets files as long as you replace their contents by environment
 # variables.
 /config/*.secret.exs
+

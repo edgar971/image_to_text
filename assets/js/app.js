@@ -21,6 +21,9 @@ import "phoenix_html"
 // import socket from "./socket"
 import state from './state'
 import picker from './image-picker'
+import fileSelectorTrigger from './file-selector-trigger'
+import fileInput from "./file-input";
+import { FILE_INPUT_SELECTOR } from "./selectors";
 
 const textElementSub = () => {
   const { text } = state.getState()
@@ -39,7 +42,9 @@ const processingSub = () => {
 }
 
 const render = () => {
+  fileInput(FILE_INPUT_SELECTOR)
   picker('.image-holder')
+  fileSelectorTrigger('.file-selector')
   state.subscribe(textElementSub)
   state.subscribe(processingSub)
 }

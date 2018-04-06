@@ -34,7 +34,7 @@
 					</div>
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">Created By Edgar Pino</p>
+						<p class="copyright">Created By <a href="https://edgarpino.com">Edgar Pino</a></p>
 					</footer>
 			</div>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

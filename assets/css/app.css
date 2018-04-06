@@ -3682,19 +3682,21 @@
 
 .image-holder.hover {
   transition: ease-in-out;
-  border-color:rgb(135, 213, 144); 
+	border-color:rgb(135, 213, 144); 
+	background-image: none;
 }
 
-
 .image-holder {
-  position: relative;
+	position: relative;
+	background: url(/images/image.svg) no-repeat center;
+	background-size: 5rem;
 }
 
 .image-holder form {
   display: none;
 }
 
-.image-holder img.preview { 
+.image-holder img.preview-image { 
   display: block;
   max-width: 100%;
   padding: 15px;
@@ -3707,10 +3709,45 @@
   width: 60px;
 }
 
+.image-holder .file-selector {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 2rem;
+	margin-left:auto;
+	margin-right:auto;
+	width: 100px;
+}
+
 .image-holder.hover .placeholder {
   display: none;
 }
 
+.image-holder.hover .file-selector, .processing .file-selector, .has-preview-image .file-selector{
+	display: none;
+}
+
+.processing .image-holder, .has-preview-image.image-holder {
+	background-image: none;
+}
+
 body.processing {
   cursor: progress;
+}
+
+@media screen and (max-width: 736px) {
+	.image-wrapper {
+		display: block;
+	}
+
+	.image-holder {
+		width: 100%;
+		margin-bottom: 3rem;
+	}
+	
+	.image-wrapper .text {
+		max-width: 100%;
+		width: 100%;
+	}
+
 }

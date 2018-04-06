@@ -1,11 +1,10 @@
-
 <section id="first" class="main special">
     <header class="major">
       <h2>Drop an Image Below</h2>
     </header>
     <div class="image-wrapper">
     <div class="image-holder">
-     <img src="/images/image.svg" class="placeholder" />
+      <a href="#selectFile" class="file-selector">Select File</a>
       <%= form_for @conn, page_path(@conn, :create),  [multipart: true], fn f -> %>
         <%= file_input f, :image, required: true %>
         <%= submit "Submit" %>

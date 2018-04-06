@@ -1,5 +1,8 @@
-import { processFiles, processFilesForPreview, previewFiles, uploadAndConvertFilesToText } from "./file"
 import state from '../state'
+import { validateFiles } from '../common/validateFiles'
+import { createFilesForPreview } from '../common/createFilesForPreview'
+import { previewFiles } from '../common/previewFiles'
+import { uploadAndConvertFilesToText } from '../common/uploadAndConvertFilesToText'
 
 export function onDragOver() {
   this.classList.add('hover')
@@ -17,14 +20,10 @@ export function onDragEnd() {
 export async function onDrop(event) {
   event.preventDefault()
   state.setProcessing(true)
-  
+
   const { files } = event.dataTransfer
-  const { target } = event
-
-  const validFiles = processFiles(files)
-  const filesToPreview = await processFilesForPreview(validFiles)
-
-  previewFiles(filesToPreview, this)
+  const validFiles = validateFiles(files)
+  await previewFiles(validFiles, this)
 
   try {
     const { text } = await uploadAndConvertFilesToText(validFiles)

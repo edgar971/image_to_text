@@ -6,4 +6,10 @@ defmodule ImgToTxtWeb.API.ImageView do
       text: text
     }
   end
+
+  def render("index.json", %{Errors: errors}) do
+    %{
+      errors: Enum.map(errors, fn(error) -> error[:Title] end)
+    }
+  end
 end

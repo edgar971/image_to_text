@@ -6,8 +6,8 @@ defmodule ImgToTxtWeb.PageController do
     render(conn, "index.html")
   end
 
-  def create(conn, %{"image" => %{path: image_path, content_type: content_type}}) do
-    response = @cognitive_api.get_text_from_image(image_path, content_type)
+  def create(conn, %{"image" => %{path: image_path}}) do
+    response = @cognitive_api.get_text_from_image(image_path)
 
     case response do
       %{Text: image_text} ->

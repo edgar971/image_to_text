@@ -7,13 +7,13 @@ defmodule ImgToTxt.Azure.CognitiveClientTest do
       :Text => "An Elixir Test \r\n"
     }
 
-    %{path: path, content_type: content_type} = %Plug.Upload{
+    %{path: path} = %Plug.Upload{
       content_type: "image/png",
       path: "test/assets/test.png",
       filename: "test.png"
     }
 
-    response = get_text_from_image(path, content_type)
+    response = get_text_from_image(path)
 
     assert Map.take(response, [:Text]) === expectedResponse
   end

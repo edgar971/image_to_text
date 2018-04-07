@@ -16,5 +16,6 @@ defmodule ImgToTxt.Azure.CognitiveClientTest do
     response = get_text_from_image(path)
 
     assert Map.take(response, [:Text]) === expectedResponse
+    Process.sleep(2000)
   end
 end

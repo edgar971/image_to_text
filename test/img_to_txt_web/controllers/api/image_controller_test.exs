@@ -15,7 +15,7 @@ defmodule ImgToTxtWeb.API.ImageControllerTest do
 
       conn = post(conn, "/api/image", %{:image => upload})
       assert json_response(conn, 200) == expectedResponse
-      Process.sleep(1500)
+      Process.sleep(2000)
     end
 
     test "image with no text", %{conn: conn} do
@@ -31,7 +31,7 @@ defmodule ImgToTxtWeb.API.ImageControllerTest do
 
       conn = post(conn, "/api/image", %{:image => upload})
       assert json_response(conn, 200) == expectedResponse
-      Process.sleep(1500)
+      Process.sleep(2000)
     end
 
     test "large image", %{conn: conn} do

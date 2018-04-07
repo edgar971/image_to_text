@@ -33,20 +33,5 @@ defmodule ImgToTxtWeb.API.ImageControllerTest do
       assert json_response(conn, 200) == expectedResponse
       Process.sleep(2000)
     end
-
-    test "large image", %{conn: conn} do
-      expectedResponse = %{
-        "errors" => ["Image Size Error"]
-      }
-
-      upload = %Plug.Upload{
-        content_type: "image/jpg",
-        path: "test/assets/large.jpg",
-        filename: "large.jpg"
-      }
-
-      conn = post(conn, "/api/image", %{:image => upload})
-      assert json_response(conn, 200) == expectedResponse
-    end
   end
 end

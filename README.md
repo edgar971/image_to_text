@@ -1,4 +1,4 @@
-# ImgToTxt
+# ImgToTxt [![Build Status](https://travis-ci.org/edgar971/image_to_text.svg?branch=master)](https://travis-ci.org/edgar971/image_to_text)
 
 To start your Phoenix server:
 

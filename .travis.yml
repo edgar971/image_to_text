@@ -8,7 +8,6 @@ addons:
 services:
 - postgresql
 before_script:
-- cp config/travis.exs config/test.exs
 - mix ecto.create
 - mix ecto.migrate
 script:

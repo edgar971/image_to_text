@@ -1,5 +1,8 @@
 # ImgToTxt [![Build Status](https://travis-ci.org/edgar971/image_to_text.svg?branch=master)](https://travis-ci.org/edgar971/image_to_text)
 
+Deps:
+  * [Imagemagick](https://imagemagick.org/script/download.php#unix)
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`
